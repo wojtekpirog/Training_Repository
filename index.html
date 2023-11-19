@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +9,39 @@
   <title>Document</title>
   <style>
     /* Wybieram wszystkie elementy, których lista klas zawiera frazę 'col' */
-    [class *= "col"] {
-      background: lightblue;
+    /* .row > [class *= "col"] {
+      background: blue;
       border: 1px solid black;
       outline: none;
-      /* padding: 10px; */
-    }
+    } */
   </style>
 </head>
 <body>
-  <div class="container-fluid text-center mt-1">
-    <div class="row gx-1">
-      <div class="col">
-        <div class="text-light bg-dark">
-          gx-1
-        </div>
+  <div class="container-fluid">
+    <div class="row row-cols-2 justify-content-center g-5">
+      <div class="col-4">
+        <div class="bg-dark text-light">.gx-5</div>
+        <div class="bg-dark text-light">.gx-5</div>
+      </div>
+      <div class="col-4">
+        <div class="bg-dark text-light">.gx-5</div>
+        <div class="bg-dark text-light">.gx-5</div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid overflow-hidden">
+    <div class="row gx-1 gy-5">
+      <div class="col-6">
+        <div class="bg-primary text-light">.gx-1.gy-5</div>
+      </div>
+      <div class="col-6">
+        <div class="bg-primary text-light">.gx-1.gy-5</div>        
+      </div>
+      <div class="col-6">
+        <div class="bg-primary text-light">.gx-1.gy-5</div>
+      </div>
+      <div class="col-6">
+        <div class="bg-primary text-light">.gx-1.gy-5</div>
       </div>
     </div>
   </div>
