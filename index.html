@@ -17,31 +17,30 @@
   </style>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row row-cols-2 justify-content-center g-5">
-      <div class="col-4">
-        <div class="bg-dark text-light">.gx-5</div>
-        <div class="bg-dark text-light">.gx-5</div>
+  <div class="container">
+    <div class="row my-4">
+      <div class="col">
+        <label for="formInput" class="form-label">Email address:</label>
+        <input type="email" class="form-control border border-success" id="formInput" placeholder="name@example.com">
       </div>
-      <div class="col-4">
-        <div class="bg-dark text-light">.gx-5</div>
-        <div class="bg-dark text-light">.gx-5</div>
+      <div class="col">
+        <label for="name" class="form-label">Enter your name here:</label>
+        <input id="name" class="form-control border border-danger-subtle" placeholder="np. Wojciech" value="Wojciech">
       </div>
     </div>
-  </div>
-  <div class="container-fluid overflow-hidden">
-    <div class="row gx-1 gy-5">
-      <div class="col-6">
-        <div class="bg-primary text-light">.gx-1.gy-5</div>
+    <div class="row my-4">
+      <div class="col">
+        <div class="display-4 fw-medium text-success pb-4 border-bottom border-success">Bezpieczny nagłówek</div>
       </div>
-      <div class="col-6">
-        <div class="bg-primary text-light">.gx-1.gy-5</div>        
+    </div>
+    <div class="row my-4">
+      <div class="col">
+        <div class="display-4 fw-normal text-danger pb-4 border-bottom border-danger">Niebezpieczny nagłówek</div>
       </div>
-      <div class="col-6">
-        <div class="bg-primary text-light">.gx-1.gy-5</div>
-      </div>
-      <div class="col-6">
-        <div class="bg-primary text-light">.gx-1.gy-5</div>
+    </div>
+    <div class="row my-4">
+      <div class="col">
+        <div class="fs-4 fw-normal bg-info p-4 border border-info-subtle border-start-0 rounded-end">Changing border color and width</div>
       </div>
     </div>
   </div>
