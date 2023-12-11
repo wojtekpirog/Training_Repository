@@ -1,20 +1,9 @@
-let score = 0;
-
-const add = (n1, n2) => {
-  score = n1 + n2;
-  if (score % 2 === 0) {
-    sayEven(score);
-  } else {
-    sayOdd(score);
-  }
+const add = (num1, num2) => {
+  const score = num1 + num2;
+  score % 2 === 0 ? sayEven(score) : sayOdd(score);
 }
 
-const sayEven = (num) => {
-  console.log(`Liczba ${num} jest parzysta.`);
-}
+const sayEven = (score) => console.log(`Liczba ${score} jest parzysta.`);
+const sayOdd = (score) => console.log(`Liczba ${score} jest nieparzysta.`);
 
-const sayOdd = (num) => {
-  console.log(`Liczba ${num} jest nieparzysta.`);
-}
-
-add(2, 1);
+add(2, 3);
