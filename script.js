@@ -1,15 +1,15 @@
-const olList = document.querySelector("ol");
-console.log(olList);
+// Żywa kolekcja przechowuje, oprócz zwykłych elementów, również te, które zostały dodane dynamicznie np. do listy elementów. document.querySelector() jej nie wspiera!
+const heading = document.querySelector("h1");
+heading.className = "display-4 fst-italic";
+heading.setAttribute("id", "pageHeading");
+console.log(`classList: ${heading.getAttribute("class")}.`);
 
-const firstLi = document.createElement("li");
-firstLi.className = "list-group-item p-0 pb-3";
-firstLi.textContent = "🔹Pierwszy element listy";
+const parags = document.getElementsByTagName("p"); // Wspiera żywe kolekcje
+console.log(parags); // parags - HTML collection. Mogę pobrać wielkość takiej kolekcji za pomocą `.length`
+console.log(`Długość kolekcji HTML: ${parags.length}`);
 
-olList.appendChild(firstLi);
-console.log(firstLi);
+const divTest = document.querySelector("div.test");
+console.log(divTest);
 
-firstLi.classList.add("text-success");
-console.log(firstLi.classList);
-
-firstLi.classList.remove("text-success")
-console.log(firstLi.classList, firstLi.className);
+const paragInsideDiv = divTest.querySelector("p:nth-child(2)");
+console.log(paragInsideDiv);
