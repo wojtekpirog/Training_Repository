@@ -1,15 +1,16 @@
-// Żywa kolekcja przechowuje, oprócz zwykłych elementów, również te, które zostały dodane dynamicznie np. do listy elementów. document.querySelector() jej nie wspiera!
-const heading = document.querySelector("h1");
-heading.className = "display-4 fst-italic";
-heading.setAttribute("id", "pageHeading");
-console.log(`classList: ${heading.getAttribute("class")}.`);
+const widthInCm = parseFloat(prompt("Podaj szerokość w centrymetrach:"));
+const heightInCm = parseFloat(prompt("Podaj wysokość w centymetrach:"));
 
-const parags = document.getElementsByTagName("p"); // Wspiera żywe kolekcje
-console.log(parags); // parags - HTML collection. Mogę pobrać wielkość takiej kolekcji za pomocą `.length`
-console.log(`Długość kolekcji HTML: ${parags.length}`);
+console.log(`Szerokość: ${widthInCm}`); // widthInCm = NaN
+console.log(typeof widthInCm); // heightInCm = NaN
+console.log(`Wysokość: ${heightInCm}`); 
+console.log(typeof heightInCm); 
 
-const divTest = document.querySelector("div.test");
-console.log(divTest);
-
-const paragInsideDiv = divTest.querySelector("p:nth-child(2)");
-console.log(paragInsideDiv);
+if (isNaN(widthInCm) || isNaN(heightInCm)) {
+  console.error("Jedna z podanych wartości (lub obie) nie jest liczbą!");
+} else if (widthInCm <= 0 || heightInCm <= 0) {
+  console.error("Jedna z podanych wartości (lub obie) nie jest liczbą dodatnią!");
+} else {
+  const areaInM2 = (widthInCm * heightInCm) / 10000;
+  console.log(`Powierzchnia wynosi: ${areaInM2} metrów kwadratowych.`);
+}
