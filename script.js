@@ -1,6 +1,14 @@
 const pageHeading = document.querySelector("h1");
-const generateBtn = document.querySelector("button");
+const btn = document.querySelector("button");
 const containerFluid = document.querySelector("div.container-fluid");
+
+let listVisible = false;
+
+const toggleList = () => {
+  listVisible ? hideList() : showList();
+  listVisible = !listVisible;
+  console.log(`Lista widoczna: ${listVisible}`);
+}
 
 const showList = () => {
   const listContainer = document.createElement("div");
@@ -20,11 +28,19 @@ const showList = () => {
   }
 
   const lastItem = uList.lastElementChild; 
-  lastItem.innerText = "❗Jestem ostatnim elementem❗"
+  lastItem.innerText = "❗I am the last item❗"
   lastItem.style.backgroundColor = "blue";
   lastItem.style.padding = "20px 40px";
   lastItem.style.fontSize = "20px";
   lastItem.style.textAlign = "center";
+
+  btn.innerText = "Hide list"
 }
 
-generateBtn.addEventListener("click", showList);
+const hideList = () => {
+  const listContainer = document.querySelector("div.mt-4");
+  containerFluid.removeChild(listContainer);
+  btn.innerText = "Show list";
+}
+
+btn.addEventListener("click", toggleList);
