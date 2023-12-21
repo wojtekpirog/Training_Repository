@@ -1,41 +1,30 @@
-const putBtn = document.querySelector("#put");
-const patchBtn = document.querySelector("#patch");
-const BASE_URL = "https://reqres.in/api/users/2";
+const pageHeading = document.querySelector("h1");
+const generateBtn = document.querySelector("button");
+const containerFluid = document.querySelector("div.container-fluid");
 
-function makePutRequest() {
-  fetch(BASE_URL, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    method: "PUT",
-    // Sending only the fields I want to update:
-    body: JSON.stringify({
-      email: "yayami@example.com",
-      first_name: "Yayami"
-    })
-  })
-    .then(res => res.json())
-    .then(dataReady => console.log(dataReady))
-    .catch(err => console.error(`Error message: ${err.message}`))
+const showList = () => {
+  const listContainer = document.createElement("div");
+  const uList = document.createElement("ul"); 
+
+  listContainer.className = "mt-4";
+  containerFluid.append(listContainer);
+
+  uList.className = "list-group list-group-flush";
+  listContainer.append(uList);
+
+  for (let i = 1; i <= 10; i++) {
+    const li = document.createElement("li");
+    li.className = "list-group-item";
+    li.innerText = `🔹Item number: ${i}`;
+    uList.append(li);
+  }
+
+  const lastItem = uList.lastElementChild; 
+  lastItem.innerText = "❗Jestem ostatnim elementem❗"
+  lastItem.style.backgroundColor = "blue";
+  lastItem.style.padding = "20px 40px";
+  lastItem.style.fontSize = "20px";
+  lastItem.style.textAlign = "center";
 }
 
-function makePatchRequest() {
-  fetch(BASE_URL, {
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
-    method: "PATCH",
-    body: JSON.stringify({
-      email: "nasikawa@example.com",
-      first_name: "Nasikawa"
-    })
-  })
-    .then(res => res.json())
-    .then(dataReady => console.log(dataReady))
-    .catch(err => console.error(`Error name: ${err.name}, message: ${err.message}`))
-}
-
-putBtn.addEventListener("click", () => makePutRequest())
-patchBtn.addEventListener("click", () => makePatchRequest())
+generateBtn.addEventListener("click", showList);
