@@ -1,19 +1,17 @@
-const cancelBtn = document.querySelector("button");
-const string = prompt("Podaj swój nick NA WSPAK");
+const timeout = document.querySelector("#timeout");
+const interval = document.querySelector("#interval");
 
-function logTxt() {
-  console.log("mówią na mnie:");
+const intervalId = setInterval(tick, 1000);
+const timeoutId = setTimeout(disableInterval, 5000);
+
+function tick() {
+  console.log("tick");
 }
 
-function reverseString(string) {
-  const reversedString = string.split("").reverse().join("");
-  console.log(reversedString);
+function disableInterval() {
+  console.log(`IntervalId: ${intervalId}`);
+  clearInterval(intervalId);
 }
 
-setTimeout(logTxt, 1000);
-const timerID = setTimeout(reverseString, 5000, string); // setTimeout returns timerID
-
-cancelBtn.addEventListener("click", () => {
-  console.log(timerID);
-  clearTimeout(timerID);
-});
+timeout.addEventListener("click", () => clearTimeout(timeoutId) );
+interval.addEventListener("click", disableInterval);
