@@ -1,3 +1,4 @@
+const cancelBtn = document.querySelector("button");
 const string = prompt("Podaj swój nick NA WSPAK");
 
 function logTxt() {
@@ -10,4 +11,9 @@ function reverseString(string) {
 }
 
 setTimeout(logTxt, 1000);
-setTimeout(reverseString, 5000, string);
+const timerID = setTimeout(reverseString, 5000, string); // setTimeout returns timerID
+
+cancelBtn.addEventListener("click", () => {
+  console.log(timerID);
+  clearTimeout(timerID);
+});
