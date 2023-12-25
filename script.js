@@ -1,24 +1,20 @@
-const innerDiv = document.createElement("div");
-innerDiv.setAttribute("data-id", "1");
-innerDiv.setAttribute("data-info", "To jest paragraf");
-innerDiv.setAttribute("data-additional-info", "Additional info");
-innerDiv.classList.add("mt-4");
-innerDiv.innerHTML = "<p>🔹To jest paragraf🔹</p>";
+const parentDiv = document.querySelector(".parentDiv");
+const imgTag = document.createElement("img");
+const clearTimeoutBtn = document.querySelector("button#timeout");
 
-document.body.append(innerDiv);
+imgTag.setAttribute("src", "./assets/images/good_vibes_only.jpg");
+imgTag.setAttribute("alt", "Good vibes only");
+imgTag.style.width = "400px";
 
-console.log(innerDiv.classList); // .classList zawiera DOMTokenList
-// Wyloguj wszystkie data-atrybuty:
-console.log(innerDiv.dataset);
-// Wyloguj `data-id`:
-console.log(innerDiv.dataset.id);
-// wyloguj `data-info`:
-console.log(innerDiv.dataset.info);
-// Wyloguj data-more-info:
-console.log(innerDiv.dataset.additionalInfo);
-// Dodaj atrybut data-number:
-innerDiv.dataset.number = "59-700";
-console.log(innerDiv.dataset);
-// DOdaj atrybut data-name i wyloguj `dataset`:
-innerDiv.dataset.name = "Yayami";
-console.log(innerDiv.dataset);
+parentDiv.append(imgTag);
+
+const printAttributes = () => {
+  const imgTagAttributes = imgTag.getAttributeNames();
+  for (let i = 0; i < imgTagAttributes.length; i++) {
+    let currAttr = imgTagAttributes[i];
+    console.log(`Atrybut: ${currAttr}; wartość atrybutu: ${imgTag.getAttribute(currAttr)}`);
+  }  
+} 
+
+const timerId = setTimeout(printAttributes, 2000);
+clearTimeoutBtn.addEventListener("click", () => clearTimeout(timerId));
