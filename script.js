@@ -1,20 +1,14 @@
-const parentDiv = document.querySelector(".parentDiv");
-const imgTag = document.createElement("img");
-const clearTimeoutBtn = document.querySelector("button#timeout");
+const liItems = document.querySelectorAll("li");
+let number = 1;
 
-imgTag.setAttribute("src", "./assets/images/good_vibes_only.jpg");
-imgTag.setAttribute("alt", "Good vibes only");
-imgTag.style.width = "400px";
+for (let i = 0; i < liItems.length; i++) {
+  liItems[i].textContent = number;
+  liItems[i].dataset.id = number;
+  number++;
+}
 
-parentDiv.append(imgTag);
+const thirdLi = document.querySelector("li[data-id='3']");
+console.log(thirdLi);
 
-const printAttributes = () => {
-  const imgTagAttributes = imgTag.getAttributeNames();
-  for (let i = 0; i < imgTagAttributes.length; i++) {
-    let currAttr = imgTagAttributes[i];
-    console.log(`Atrybut: ${currAttr}; wartość atrybutu: ${imgTag.getAttribute(currAttr)}`);
-  }  
-} 
-
-const timerId = setTimeout(printAttributes, 2000);
-clearTimeoutBtn.addEventListener("click", () => clearTimeout(timerId));
+const listItemGrandParent = thirdLi.closest("div.wrapper");
+console.log(listItemGrandParent);
