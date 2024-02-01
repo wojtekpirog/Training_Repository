@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Jeśli użytkownik zwiększy/zmniejszy domyślny rozmiar czcionki w przeglądarce, font-size się dostosuje; 62.5% = 10px */
+html {
+  font-size: 62.5%; 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  z-index: -1;
+}
+
+.orange-color {
+  color: rgb(255, 102, 0);
+}
+
+/* nawigacja */
+.navbar-brand {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.bi-camera {
+  font-size: 3rem;
+}
+
+.nav-link, .navbar-toggler-icon {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.navbar-toggler,
+.navbar-brand {
+  padding: 1rem 2rem;
+}
+
+/* hero section */
+.hero-section {
+  position: relative;
+  height: 60rem;
+  z-index: 0;
+  background-image: url("../assets/images/hero_background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section .btn {
+  width: 200px;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.hero-section .btn:hover {
+  background-color: rgba(248, 249, 250, .2);
+}
+
+.hero-section .btn > i {
+  font-size: 2rem;
+  padding: 0;
+}
+
+/* aboutus section */
+.aboutus-box > h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+
+.aboutus-icon {
+  font-size: 5rem;
+}
+
+.accordion-button {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+/* team section */
+.team {
+  background-color: rgb(60, 60, 60);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.team .card-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.team .card-subtitle {
+  font-size: 1.8rem;
+  opacity: .8;
+  margin-bottom: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgb(33, 37, 41);
+  color: rgb(255, 102, 0);
+}

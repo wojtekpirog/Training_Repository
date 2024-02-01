@@ -1,14 +1,6 @@
-const liItems = document.querySelectorAll("li");
-let number = 1;
+// Pętla `while` wykonuje się tak długo, jak długo prawdziwy jest warunek w nawiasie
+// Pętli `for` używamy wtedy, gdy wiemy, ile razy (ile czasu) pętla będzie się wykonywać
+// Pętli `while` używamy, gdy chcemy wykonać jakiś kod w pętli, ale nie wiemy, ile razy ta pętla powinna się wykonać
 
-for (let i = 0; i < liItems.length; i++) {
-  liItems[i].textContent = number;
-  liItems[i].dataset.id = number;
-  number++;
-}
-
-const thirdLi = document.querySelector("li[data-id='3']");
-console.log(thirdLi);
-
-const listItemGrandParent = thirdLi.closest("div.wrapper");
-console.log(listItemGrandParent);
+// Pętla `for...in` przydaje się przy obiektach, natomiast pętla `for...of` - do tablic:
+// Z pętli `for...of` możemy skorzystać, gdy nie mamy zamiaru wykonywać działań na konkretnych elementach (indeksach) tablicy
