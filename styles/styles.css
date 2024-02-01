@@ -115,3 +115,13 @@ body {
   background-color: rgb(33, 37, 41);
   color: rgb(255, 102, 0);
 }
+
+/* contact section */
+#contact input[type="submit"] {
+  padding: 2rem;
+  font-size: 1.8rem;
+}
+
+#contact input[type="submit"]:hover {
+  color: rgba(248, 249, 250, .2);
+}
