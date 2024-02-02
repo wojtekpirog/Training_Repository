@@ -15,6 +15,10 @@ body {
   font-size: 1.6rem;
 }
 
+[id] {
+  scroll-margin-top: 95px;
+}
+
 .hero-shadow {
   position: absolute;
   top: 0;
@@ -117,11 +121,35 @@ body {
 }
 
 /* contact section */
-#contact input[type="submit"] {
+.submit-form-button {
   padding: 2rem;
-  font-size: 1.8rem;
+  font-size: 1.8rem;  
 }
 
-#contact input[type="submit"]:hover {
+.submit-form-button:hover {
   color: rgba(248, 249, 250, .2);
+}
+
+.contact-info > h3 {
+  font-size: 2rem;
+}
+
+.contact-info > p:first-of-type {
+  font-size: 2rem;
+}
+
+section[id="contact"] input,
+section[id="contact"] textarea {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+textarea {
+  resize: none;
+}
+
+@media screen and (min-width: 992px) {
+  [id] {
+    scroll-margin-top: 95px;
+  }
 }
