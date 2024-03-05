@@ -1,5 +1,82 @@
-@use "reset";
+@use './colors.scss' as colors;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-:root { 
+:root {
+  font-size: 62.5%;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #333;
+}
+
+[id] {
+  scroll-margin-top: 52.5px;
+}
+
+/* Navbar */
+
+nav {
+  text-transform: uppercase;
+
+  .navbar-nav .nav-link.active, .nav-link:focus, .nav-link:hover {
+    color: colors.$primary-color;
+  }
+
+  .navbar-brand, .nav-link, .fa-bars {
+    color: colors.$white;
+    line-height: 1;
+    padding: 10px;
+  }
+
+  .navbar-brand:hover {
+    color: colors.$white;
+  }
+
+  .navbar-brand span {
+    color: colors.$primary-color;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+  }
+}
+
+/* Sekcja "Hero" */
+
+.hero-img {
+  height: calc(100vh - 52.5px);
+  margin-top: 52.5px;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: colors.$hero-shadow;
+  }
+}
+
+.hero-photo {
+  background: url("../assets/images/hero_background_md.jpg") center / cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-photo {
+    background-image: url("../assets/images/hero_background_lg.jpg");
+  }
 }

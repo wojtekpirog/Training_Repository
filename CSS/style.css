@@ -8,12 +8,66 @@
 
 :root {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #333;
 }
 
-:root {
-  scroll-behavior: smooth;
+[id] {
+  scroll-margin-top: 52.5px;
+}
+
+/* Navbar */
+nav {
+  text-transform: uppercase;
+}
+nav .navbar-nav .nav-link.active, nav .nav-link:focus, nav .nav-link:hover {
+  color: #039dff;
+}
+nav .navbar-brand, nav .nav-link, nav .fa-bars {
+  color: #FFFFFF;
+  line-height: 1;
+  padding: 10px;
+}
+nav .navbar-brand:hover {
+  color: #FFFFFF;
+}
+nav .navbar-brand span {
+  color: #039dff;
+}
+nav .navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+/* Sekcja "Hero" */
+.hero-img {
+  height: calc(100vh - 52.5px);
+  margin-top: 52.5px;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-img .hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-photo {
+  background: url("../assets/images/hero_background_md.jpg") center/cover;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-photo {
+    background-image: url("../assets/images/hero_background_lg.jpg");
+  }
 }/*# sourceMappingURL=style.css.map */
