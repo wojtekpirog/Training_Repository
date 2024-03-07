@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   background-color: #333;
 }
 
@@ -22,21 +22,33 @@ body {
 
 /* Navbar */
 nav {
-  text-transform: uppercase;
+  background-color: #333;
 }
-nav .navbar-nav .nav-link.active, nav .nav-link:focus, nav .nav-link:hover {
+nav .navbar-nav {
+  align-items: center;
+}
+nav .navbar-nav .nav-link.active {
   color: #039dff;
 }
+nav .nav-link:focus, nav .nav-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
 nav .navbar-brand, nav .nav-link, nav .fa-bars {
-  color: #FFFFFF;
+  color: #fff;
   line-height: 1;
   padding: 10px;
 }
+nav .navbar-brand {
+  font-size: 2.4rem;
+}
 nav .navbar-brand:hover {
-  color: #FFFFFF;
+  color: #fff;
 }
 nav .navbar-brand span {
   color: #039dff;
+}
+nav .nav-link, nav .navbar-toggler {
+  font-size: 1.6rem;
 }
 nav .navbar-toggler {
   border: none;
@@ -44,16 +56,40 @@ nav .navbar-toggler {
 }
 
 /* Sekcja "Hero" */
-.hero-img {
-  height: calc(100vh - 52.5px);
-  margin-top: 52.5px;
+.hero {
+  height: 100vh;
   position: relative;
-  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hero-img .hero-shadow {
+.hero .hero-text {
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+}
+.hero .hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.hero .hero-text h1 span {
+  color: #039dff;
+}
+.hero .hero-text p {
+  font-size: 1.6rem;
+}
+.hero .hero-text a[href="#aboutus"] {
+  font-size: 1.6rem;
+}
+.hero .hero-text a[href="#aboutus"] .fa-arrow-down {
+  color: #039dff;
+}
+.hero .hero-text a[href="#aboutus"]:hover {
+  color: #f8f9fa;
+  background-color: rgba(248, 249, 250, 0.3);
+}
+.hero .hero-shadow {
   position: absolute;
   top: 0;
   left: 0;
@@ -61,12 +97,37 @@ nav .navbar-toggler {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.hero .fa-chevron-down {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  color: #fff;
+  font-size: 2.5rem;
+}
 
 .hero-photo {
   background: url("../assets/images/hero_background_md.jpg") center/cover;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .nav-link:not(.active) {
+    position: relative;
+  }
+  .nav-link:not(.active)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #039dff;
+    transition: left 0.3s, width 0.3s;
+  }
+  .nav-link:not(.active):hover::after {
+    left: 0;
+    width: 100%;
+  }
   .hero-photo {
     background-image: url("../assets/images/hero_background_lg.jpg");
   }

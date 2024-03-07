@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: #333;
 }
 
@@ -24,10 +24,18 @@ body {
 /* Navbar */
 
 nav {
-  text-transform: uppercase;
+  background-color: colors.$bgColor;
 
-  .navbar-nav .nav-link.active, .nav-link:focus, .nav-link:hover {
-    color: colors.$primary-color;
+  .navbar-nav {
+    align-items: center;
+
+    .nav-link.active {
+      color: colors.$primary-color;
+    }
+  }
+
+  .nav-link:focus, .nav-link:hover {
+    color: colors.$navbar-hover-color;
   }
 
   .navbar-brand, .nav-link, .fa-bars {
@@ -36,12 +44,20 @@ nav {
     padding: 10px;
   }
 
+  .navbar-brand {
+    font-size: 2.4rem;
+  }
+
   .navbar-brand:hover {
     color: colors.$white;
   }
 
   .navbar-brand span {
     color: colors.$primary-color;
+  }
+
+  .nav-link, .navbar-toggler {
+    font-size: 1.6rem;
   }
   
   .navbar-toggler {
@@ -52,14 +68,44 @@ nav {
 
 /* Sekcja "Hero" */
 
-.hero-img {
-  height: calc(100vh - 52.5px);
-  margin-top: 52.5px;
+.hero {
+  height: 100vh;
   position: relative;
-  z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .hero-text {
+    color: colors.$white;
+    z-index: 1;
+    text-align: center;
+
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      span {
+        color: colors.$primary-color;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    a[href="#aboutus"] {
+      font-size: 1.6rem;
+      
+      .fa-arrow-down {
+        color: colors.$primary-color;
+      }
+      &:hover {
+        color: colors.$light;
+        background-color: colors.$button-hover-color;
+      }
+    }
+  }
 
   .hero-shadow {
     position: absolute;
@@ -69,13 +115,44 @@ nav {
     height: 100%;
     background-color: colors.$hero-shadow;
   }
+
+  .fa-chevron-down {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    color: colors.$white;
+    font-size: 2.5rem;
+  }
 }
 
 .hero-photo {
   background: url("../assets/images/hero_background_md.jpg") center / cover;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  .nav-link:not(.active) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: colors.$primary-color;
+      transition: left .3s, width .3s;
+    }
+
+    &:hover {
+      &::after {
+        left: 0;
+        width: 100%;        
+      }
+    }    
+  }
+  
   .hero-photo {
     background-image: url("../assets/images/hero_background_lg.jpg");
   }
