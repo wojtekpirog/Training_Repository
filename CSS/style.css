@@ -22,7 +22,10 @@ body {
 
 /* Navbar */
 nav {
-  background-color: #333;
+  transition: 0.5s;
+}
+nav.shadow-bg {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 nav .navbar-nav {
   align-items: center;
@@ -66,7 +69,6 @@ nav .navbar-toggler {
 .hero .hero-text {
   color: #fff;
   z-index: 1;
-  text-align: center;
 }
 .hero .hero-text h1 {
   font-size: 3.2rem;
@@ -110,6 +112,14 @@ nav .navbar-toggler {
   background: url("../assets/images/hero_background_md.jpg") center/cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero .hero-text h1 {
+    font-size: 4.6rem;
+  }
+  .hero .hero-text p {
+    font-size: 2.3rem;
+  }
+}
 @media screen and (min-width: 992px) {
   .nav-link:not(.active) {
     position: relative;
@@ -130,5 +140,11 @@ nav .navbar-toggler {
   }
   .hero-photo {
     background-image: url("../assets/images/hero_background_lg.jpg");
+  }
+  .hero .hero-text h1 {
+    font-size: 50px;
+  }
+  .hero .hero-text p {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

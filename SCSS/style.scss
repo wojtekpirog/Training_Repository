@@ -24,7 +24,11 @@ body {
 /* Navbar */
 
 nav {
-  background-color: colors.$bgColor;
+  transition: .5s;
+
+  &.shadow-bg {
+    background-color: rgba(0, 0, 0, .8);
+  }
 
   .navbar-nav {
     align-items: center;
@@ -78,7 +82,6 @@ nav {
   .hero-text {
     color: colors.$white;
     z-index: 1;
-    text-align: center;
 
     h1 {
       font-size: 3.2rem;
@@ -130,6 +133,17 @@ nav {
   background: url("../assets/images/hero_background_md.jpg") center / cover;
 }
 
+@media screen and (min-width: 768px) {
+  .hero .hero-text {
+    h1 {
+      font-size: 4.6rem;
+    }
+    p {
+      font-size: 2.3rem;
+    }
+  }
+}
+
 @media screen and (min-width: 992px) {
   .nav-link:not(.active) {
     position: relative;
@@ -156,4 +170,13 @@ nav {
   .hero-photo {
     background-image: url("../assets/images/hero_background_lg.jpg");
   }
+
+  .hero .hero-text {
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      font-size: 2.5rem;
+    }
+  }    
 }
