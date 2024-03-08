@@ -17,7 +17,7 @@ body {
 }
 
 [id] {
-  scroll-margin-top: 52.5px;
+  scroll-margin-top: 71px;
 }
 
 /* Navbar */
@@ -42,7 +42,7 @@ nav .navbar-brand, nav .nav-link, nav .fa-bars {
   padding: 10px;
 }
 nav .navbar-brand {
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 nav .navbar-brand:hover {
   color: #fff;
@@ -51,7 +51,7 @@ nav .navbar-brand span {
   color: #039dff;
 }
 nav .nav-link, nav .navbar-toggler {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 nav .navbar-toggler {
   border: none;
@@ -83,9 +83,12 @@ nav .navbar-toggler {
 }
 .hero .hero-text a[href="#aboutus"] {
   font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
 }
 .hero .hero-text a[href="#aboutus"] .fa-arrow-down {
   color: #039dff;
+  font-size: 2.4rem;
 }
 .hero .hero-text a[href="#aboutus"]:hover {
   color: #f8f9fa;
@@ -102,8 +105,9 @@ nav .navbar-toggler {
 .hero .fa-chevron-down {
   position: absolute;
   left: 50%;
+  bottom: 0;
   transform: translateX(-50%);
-  bottom: 10px;
+  padding: 20px;
   color: #fff;
   font-size: 2.5rem;
 }

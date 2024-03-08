@@ -18,7 +18,7 @@ body {
 }
 
 [id] {
-  scroll-margin-top: 52.5px;
+  scroll-margin-top: 71px;
 }
 
 /* Navbar */
@@ -49,7 +49,7 @@ nav {
   }
 
   .navbar-brand {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   .navbar-brand:hover {
@@ -61,7 +61,7 @@ nav {
   }
 
   .nav-link, .navbar-toggler {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   
   .navbar-toggler {
@@ -99,9 +99,12 @@ nav {
 
     a[href="#aboutus"] {
       font-size: 1.6rem;
+      display: inline-flex;
+      align-items: center;
       
       .fa-arrow-down {
         color: colors.$primary-color;
+        font-size: 2.4rem;
       }
       &:hover {
         color: colors.$light;
@@ -122,8 +125,9 @@ nav {
   .fa-chevron-down {
     position: absolute;
     left: 50%;
+    bottom: 0;
     transform: translateX(-50%);
-    bottom: 10px;
+    padding: 20px;
     color: colors.$white;
     font-size: 2.5rem;
   }
