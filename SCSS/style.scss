@@ -36,7 +36,38 @@ body {
 }
 
 .card {
+  transition: color .25s linear;
   border: none;
+  margin-bottom: 10px;
+
+  div {
+    margin-bottom: 12px;
+
+    i {
+      margin: 20px 0 10px;
+      font-size: 4rem;
+    }     
+  }
+  .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .card-text {
+    font-size: 1.6rem;
+  }    
+  &:hover {
+    color: colors.$primary-color;
+  }
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: colors.$hero-shadow;
 }
 
 /* Navbar */
@@ -131,15 +162,6 @@ nav {
     }
   }
 
-  .hero-shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: colors.$hero-shadow;
-  }
-
   .fa-chevron-down {
     position: absolute;
     left: 50%;
@@ -151,34 +173,28 @@ nav {
   }
 }
 
-/* Sekcja "About us" */
+/* Sekcja "What do we do" */
 
-section.about-us {
+section.portfolio-info {
+  background: url("../assets/images/processor_mq.jpg") center / cover;
+  z-index: 0;
+
   .card {
-    transition: color .25s linear;
+    background-color: transparent;
+    color: colors.$white;
+    margin-bottom: 30px;
+
+    .card-title {
+      margin-bottom: 0;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
   }
 
-  .card:hover {
-    color: colors.$primary-color;
-  }
-
-  i {
-    margin: 20px 0 10px;
-    font-size: 4rem;
-  }
-
-  .card > div {
-    margin-bottom: 12px;
-  }
-
-  .card-title {
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .card-text {
-    font-size: 1.6rem;
+  .hero-shadow {
+    z-index: -1;
   }
 }
 
@@ -227,5 +243,13 @@ section.about-us {
     p {
       font-size: 2.5rem;
     }
-  }    
+  }
+  
+  section.portfolio-info {
+    background-image: url("../assets/images/processor_hq.jpg");
+
+    .card {
+      margin-bottom: 10px;
+    }
+  }
 }

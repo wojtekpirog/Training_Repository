@@ -35,7 +35,36 @@ body {
 }
 
 .card {
+  transition: color 0.25s linear;
   border: none;
+  margin-bottom: 10px;
+}
+.card div {
+  margin-bottom: 12px;
+}
+.card div i {
+  margin: 20px 0 10px;
+  font-size: 4rem;
+}
+.card .card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.card .card-text {
+  font-size: 1.6rem;
+}
+.card:hover {
+  color: #039dff;
+}
+
+.hero-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Navbar */
@@ -112,14 +141,6 @@ nav .navbar-toggler {
   color: #f8f9fa;
   background-color: rgba(248, 249, 250, 0.3);
 }
-.hero .hero-shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
 .hero .fa-chevron-down {
   position: absolute;
   left: 50%;
@@ -130,27 +151,24 @@ nav .navbar-toggler {
   font-size: 2.5rem;
 }
 
-/* Sekcja "About us" */
-section.about-us .card {
-  transition: color 0.25s linear;
+/* Sekcja "What do we do" */
+section.portfolio-info {
+  background: url("../assets/images/processor_mq.jpg") center/cover;
+  z-index: 0;
 }
-section.about-us .card:hover {
-  color: #039dff;
+section.portfolio-info .card {
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 30px;
 }
-section.about-us i {
-  margin: 20px 0 10px;
-  font-size: 4rem;
+section.portfolio-info .card .card-title {
+  margin-bottom: 0;
 }
-section.about-us .card > div {
-  margin-bottom: 12px;
+section.portfolio-info .card div {
+  margin-bottom: 10px;
 }
-section.about-us .card-title {
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-section.about-us .card-text {
-  font-size: 1.6rem;
+section.portfolio-info .hero-shadow {
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
@@ -187,5 +205,11 @@ section.about-us .card-text {
   }
   .hero .hero-text p {
     font-size: 2.5rem;
+  }
+  section.portfolio-info {
+    background-image: url("../assets/images/processor_hq.jpg");
+  }
+  section.portfolio-info .card {
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
