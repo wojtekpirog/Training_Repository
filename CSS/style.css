@@ -9,6 +9,7 @@
 :root {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 71px;
 }
 
 body {
@@ -16,13 +17,30 @@ body {
   background-color: #333;
 }
 
-[id] {
-  scroll-margin-top: 71px;
+.hero-photo {
+  background: url("../assets/images/hero_background_md.jpg") center/cover;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2.6rem;
+}
+
+.underline {
+  border: 2px solid #039dff;
+  width: 60px;
+  margin: 0 auto 40px;
+}
+
+.card {
+  border: none;
 }
 
 /* Navbar */
 nav {
-  transition: 0.5s;
+  transition: background-color 0.5s;
 }
 nav.shadow-bg {
   background-color: rgba(0, 0, 0, 0.8);
@@ -112,8 +130,27 @@ nav .navbar-toggler {
   font-size: 2.5rem;
 }
 
-.hero-photo {
-  background: url("../assets/images/hero_background_md.jpg") center/cover;
+/* Sekcja "About us" */
+section.about-us .card {
+  transition: color 0.25s linear;
+}
+section.about-us .card:hover {
+  color: #039dff;
+}
+section.about-us i {
+  margin: 20px 0 10px;
+  font-size: 4rem;
+}
+section.about-us .card > div {
+  margin-bottom: 12px;
+}
+section.about-us .card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+section.about-us .card-text {
+  font-size: 1.6rem;
 }
 
 @media screen and (min-width: 768px) {
