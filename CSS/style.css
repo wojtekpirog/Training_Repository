@@ -66,6 +66,9 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.hero-shadow.caption-shadow {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
 /* Navbar */
 nav {
@@ -169,6 +172,56 @@ section.portfolio-info .card div {
 }
 section.portfolio-info .hero-shadow {
   z-index: -1;
+}
+
+/* Sekcja "Portfolio" */
+section.portfolio .carousel-indicators {
+  margin: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+section.portfolio .carousel-indicators [data-bs-target] {
+  width: 40px;
+  height: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: #039dff;
+  border-top: none;
+}
+section.portfolio .carousel-indicators [data-bs-target]:not(.active) {
+  opacity: 0.3;
+}
+section.portfolio .carousel-item {
+  height: 600px;
+}
+section.portfolio .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  padding: 3rem 0;
+  z-index: 1;
+}
+section.portfolio .carousel-caption h5 {
+  font-size: 4rem;
+}
+section.portfolio .carousel-caption p {
+  font-size: 2rem;
+}
+section.portfolio .carousel-caption .hero-shadow {
+  z-index: -1;
+}
+section.portfolio .carousel-control-prev-icon,
+section.portfolio .carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+}
+section.portfolio .carousel-control-prev-icon.carousel-control-prev-icon,
+section.portfolio .carousel-control-next-icon.carousel-control-prev-icon {
+  background-image: url("../assets/images/chevron-left-solid.svg");
+}
+section.portfolio .carousel-control-prev-icon.carousel-control-next-icon,
+section.portfolio .carousel-control-next-icon.carousel-control-next-icon {
+  background-image: url("../assets/images/chevron-right-solid.svg");
 }
 
 @media screen and (min-width: 768px) {

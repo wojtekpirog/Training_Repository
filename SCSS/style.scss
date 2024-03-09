@@ -68,6 +68,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: colors.$hero-shadow;
+
+  &.caption-shadow {
+    background-color: colors.$caption-shadow;
+  }
 }
 
 /* Navbar */
@@ -198,6 +202,66 @@ section.portfolio-info {
   }
 }
 
+/* Sekcja "Portfolio" */
+
+section.portfolio {
+  .carousel-indicators {
+    margin: 0;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    [data-bs-target] {
+      width: 40px;
+      height: 6px;
+      margin-left: 6px;
+      margin-right: 6px;
+      background-color: colors.$primary-color;
+      border-top: none;
+
+      
+      &:not(.active) {
+        opacity: .3;
+      }      
+    }
+  }
+
+  .carousel-item {
+    height: 600px;
+  }
+
+  .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+    padding: 3rem 0;
+    z-index: 1;
+
+    h5 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+
+    .hero-shadow {
+      z-index: -1;
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+
+    &.carousel-control-prev-icon {
+      background-image: url("../assets/images/chevron-left-solid.svg");
+    }
+    &.carousel-control-next-icon {
+      background-image: url("../assets/images/chevron-right-solid.svg");
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero .hero-text {
     h1 {
@@ -252,4 +316,8 @@ section.portfolio-info {
       margin-bottom: 10px;
     }
   }
+}
+
+@media screen and (min-width: 1200px) {
+
 }
