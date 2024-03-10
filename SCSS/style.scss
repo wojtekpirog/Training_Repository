@@ -15,7 +15,7 @@
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #333;
+  background-color: colors.$bgColor;
 }
 
 .hero-photo {
@@ -56,9 +56,6 @@ body {
   .card-text {
     font-size: 1.6rem;
   }    
-  &:hover {
-    color: colors.$primary-color;
-  }
 }
 
 .hero-shadow {
@@ -177,7 +174,16 @@ nav {
   }
 }
 
-/* Sekcja "What do we do" */
+/* Sekcja "About Us" */
+section.about-us {
+  .card {
+    &:hover {
+      color: colors.$primary-color;
+    }
+  }
+}
+
+/* Sekcja "Portfolio-info" */
 
 section.portfolio-info {
   background: url("../assets/images/processor_mq.jpg") center / cover;
@@ -259,6 +265,45 @@ section.portfolio {
     &.carousel-control-next-icon {
       background-image: url("../assets/images/chevron-right-solid.svg");
     }
+  }
+}
+
+/* Sekcja "Prices" */
+section.prices {
+  .card {
+    font-weight: 600;
+    text-align: center;
+
+    .card-header {
+      margin: 0;
+
+      .card-title {
+        margin-bottom: 12px;
+      }
+    }
+
+    .card-body {
+      li {
+        margin: 12px 0;
+        font-size: 1.4rem;
+
+        &:last-child {
+          font-size: 1.6rem;
+          font-weight: 700;
+        }
+      }
+
+      button {
+        padding: 8px 16px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
   }
 }
 

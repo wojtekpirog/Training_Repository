@@ -14,7 +14,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
-  background-color: #333;
+  background-color: #ebecf2;
 }
 
 .hero-photo {
@@ -53,9 +53,6 @@ body {
 }
 .card .card-text {
   font-size: 1.6rem;
-}
-.card:hover {
-  color: #039dff;
 }
 
 .hero-shadow {
@@ -154,7 +151,12 @@ nav .navbar-toggler {
   font-size: 2.5rem;
 }
 
-/* Sekcja "What do we do" */
+/* Sekcja "About Us" */
+section.about-us .card:hover {
+  color: #039dff;
+}
+
+/* Sekcja "Portfolio-info" */
 section.portfolio-info {
   background: url("../assets/images/processor_mq.jpg") center/cover;
   z-index: 0;
@@ -222,6 +224,35 @@ section.portfolio .carousel-control-next-icon.carousel-control-prev-icon {
 section.portfolio .carousel-control-prev-icon.carousel-control-next-icon,
 section.portfolio .carousel-control-next-icon.carousel-control-next-icon {
   background-image: url("../assets/images/chevron-right-solid.svg");
+}
+
+/* Sekcja "Prices" */
+section.prices .card {
+  font-weight: 600;
+  text-align: center;
+}
+section.prices .card .card-header {
+  margin: 0;
+}
+section.prices .card .card-header .card-title {
+  margin-bottom: 12px;
+}
+section.prices .card .card-body li {
+  margin: 12px 0;
+  font-size: 1.4rem;
+}
+section.prices .card .card-body li:last-child {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+section.prices .card .card-body button {
+  padding: 8px 16px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+section.prices p {
+  font-size: 1.4rem;
 }
 
 @media screen and (min-width: 768px) {
