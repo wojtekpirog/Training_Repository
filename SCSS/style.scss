@@ -83,13 +83,18 @@ nav {
   .navbar-nav {
     align-items: center;
 
-    .nav-link.active {
-      color: colors.$primary-color;
-    }
-  }
+    .nav-link {
+      font-size: 2rem;
 
-  .nav-link:focus, .nav-link:hover {
-    color: colors.$navbar-hover-color;
+      &.active {
+        color: colors.$primary-color;
+      }
+
+      &:hover,
+      &:focus {
+        color: colors.$navbar-hover-color;
+      }
+    }
   }
 
   .navbar-brand, .nav-link, .fa-bars {
@@ -109,14 +114,37 @@ nav {
   .navbar-brand span {
     color: colors.$primary-color;
   }
-
-  .nav-link, .navbar-toggler {
-    font-size: 2rem;
-  }
   
   .navbar-toggler {
     border: none;
     padding: 0;
+    font-size: 2rem;
+
+    &:hover {
+      .line1 {
+        transform: translateY(-4px);
+      }
+      .line3 {
+        transform: translateY(4px);
+      }
+    }
+
+    .line1, .line2, .line3 {
+      margin: 6px 0;
+      width: 30px;
+      height: 4px;
+      background-color: colors.$light;
+      border-radius: 4px;
+      transition: transform .2s linear;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -187,6 +215,7 @@ section.about-us {
 
 section.portfolio-info {
   background: url("../assets/images/processor_mq.jpg") center / cover;
+  background-attachment: fixed;
   z-index: 0;
 
   .card {
@@ -331,6 +360,57 @@ section.prices {
   }
 }
 
+/* Sekcja "Team" */
+section.team {
+  background: url("../assets/images/office-room-mq.jpg") center / cover;
+  background-attachment: fixed;
+  z-index: 0;
+
+  .card {
+    .card-header {
+      line-height: 1;
+
+      .underline {
+        border: 1px solid colors.$primary-color;
+        margin: 2px auto;
+      }
+    }
+
+    img.card-img-top {
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 0;
+      
+      i.fa-brands {
+        margin: 0;
+        font-size: 3rem;
+        padding: 16px;
+        
+        &.fa-facebook-f {
+          color: #3b5998;
+        }
+        &.fa-twitter {
+          color: #1da1f2;
+        }
+        &.fa-linkedin {
+          color: #3b5998;
+        }
+      }
+    }    
+  }
+
+
+
+  .hero-shadow {
+    z-index: -1;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero .hero-text {
     h1 {
@@ -338,6 +418,25 @@ section.prices {
     }
     p {
       font-size: 2.3rem;
+    }
+  }
+
+  section.team {
+    .card {
+      transition: transform .3s ease-in-out;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+      
+      img.card-img-top {
+        height: 300px;
+      }
+
+      .card-footer i.fa-brands {
+        font-size: 2rem;
+        padding: 10px;
+      }      
     }
   }
 }

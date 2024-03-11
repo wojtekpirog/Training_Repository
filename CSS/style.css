@@ -77,10 +77,13 @@ nav.shadow-bg {
 nav .navbar-nav {
   align-items: center;
 }
+nav .navbar-nav .nav-link {
+  font-size: 2rem;
+}
 nav .navbar-nav .nav-link.active {
   color: #039dff;
 }
-nav .nav-link:focus, nav .nav-link:hover {
+nav .navbar-nav .nav-link:hover, nav .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.6);
 }
 nav .navbar-brand, nav .nav-link, nav .fa-bars {
@@ -97,12 +100,30 @@ nav .navbar-brand:hover {
 nav .navbar-brand span {
   color: #039dff;
 }
-nav .nav-link, nav .navbar-toggler {
-  font-size: 2rem;
-}
 nav .navbar-toggler {
   border: none;
   padding: 0;
+  font-size: 2rem;
+}
+nav .navbar-toggler:hover .line1 {
+  transform: translateY(-4px);
+}
+nav .navbar-toggler:hover .line3 {
+  transform: translateY(4px);
+}
+nav .navbar-toggler .line1, nav .navbar-toggler .line2, nav .navbar-toggler .line3 {
+  margin: 6px 0;
+  width: 30px;
+  height: 4px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  transition: transform 0.2s linear;
+}
+nav .navbar-toggler .line1:first-child, nav .navbar-toggler .line2:first-child, nav .navbar-toggler .line3:first-child {
+  margin-top: 0;
+}
+nav .navbar-toggler .line1:last-child, nav .navbar-toggler .line2:last-child, nav .navbar-toggler .line3:last-child {
+  margin-bottom: 0;
 }
 
 /* Sekcja "Hero" */
@@ -159,6 +180,7 @@ section.about-us .card:hover {
 /* Sekcja "Portfolio-info" */
 section.portfolio-info {
   background: url("../assets/images/processor_mq.jpg") center/cover;
+  background-attachment: fixed;
   z-index: 0;
 }
 section.portfolio-info .card {
@@ -276,12 +298,66 @@ section.prices p {
   font-size: 1.4rem;
 }
 
+/* Sekcja "Team" */
+section.team {
+  background: url("../assets/images/office-room-mq.jpg") center/cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+section.team .card .card-header {
+  line-height: 1;
+}
+section.team .card .card-header .underline {
+  border: 1px solid #039dff;
+  margin: 2px auto;
+}
+section.team .card img.card-img-top {
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.team .card .card-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+section.team .card .card-footer i.fa-brands {
+  margin: 0;
+  font-size: 3rem;
+  padding: 16px;
+}
+section.team .card .card-footer i.fa-brands.fa-facebook-f {
+  color: #3b5998;
+}
+section.team .card .card-footer i.fa-brands.fa-twitter {
+  color: #1da1f2;
+}
+section.team .card .card-footer i.fa-brands.fa-linkedin {
+  color: #3b5998;
+}
+section.team .hero-shadow {
+  z-index: -1;
+}
+
 @media screen and (min-width: 768px) {
   .hero .hero-text h1 {
     font-size: 4.6rem;
   }
   .hero .hero-text p {
     font-size: 2.3rem;
+  }
+  section.team .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  section.team .card:hover {
+    transform: scale(0.95);
+  }
+  section.team .card img.card-img-top {
+    height: 300px;
+  }
+  section.team .card .card-footer i.fa-brands {
+    font-size: 2rem;
+    padding: 10px;
   }
 }
 @media screen and (min-width: 992px) {
