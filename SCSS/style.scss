@@ -377,8 +377,12 @@ section.team {
     }
 
     img.card-img-top {
-      height: 400px;
+      height: 300px;
       object-fit: cover;
+    }
+
+    .card-body {
+      height: 80px;
     }
 
     .card-footer {
@@ -388,8 +392,8 @@ section.team {
       
       i.fa-brands {
         margin: 0;
-        font-size: 3rem;
-        padding: 16px;
+        font-size: 2rem;
+        padding: 10px;
         
         &.fa-facebook-f {
           color: #3b5998;
@@ -403,11 +407,22 @@ section.team {
       }
     }    
   }
-
-
-
   .hero-shadow {
     z-index: -1;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  section.team {
+    .card {
+      .card-body {
+        height: 100px;
+      }
+      .card-footer i.fa-brands {
+        font-size: 2rem;
+        padding: 16px;
+      } 
+    }
   }
 }
 
@@ -430,13 +445,8 @@ section.team {
       }
       
       img.card-img-top {
-        height: 300px;
-      }
-
-      .card-footer i.fa-brands {
-        font-size: 2rem;
-        padding: 10px;
-      }      
+        height: 400px;
+      }     
     }
   }
 }

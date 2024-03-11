@@ -312,9 +312,12 @@ section.team .card .card-header .underline {
   margin: 2px auto;
 }
 section.team .card img.card-img-top {
-  height: 400px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section.team .card .card-body {
+  height: 80px;
 }
 section.team .card .card-footer {
   display: flex;
@@ -323,8 +326,8 @@ section.team .card .card-footer {
 }
 section.team .card .card-footer i.fa-brands {
   margin: 0;
-  font-size: 3rem;
-  padding: 16px;
+  font-size: 2rem;
+  padding: 10px;
 }
 section.team .card .card-footer i.fa-brands.fa-facebook-f {
   color: #3b5998;
@@ -339,6 +342,15 @@ section.team .hero-shadow {
   z-index: -1;
 }
 
+@media screen and (min-width: 576px) {
+  section.team .card .card-body {
+    height: 100px;
+  }
+  section.team .card .card-footer i.fa-brands {
+    font-size: 2rem;
+    padding: 16px;
+  }
+}
 @media screen and (min-width: 768px) {
   .hero .hero-text h1 {
     font-size: 4.6rem;
@@ -353,11 +365,7 @@ section.team .hero-shadow {
     transform: scale(0.95);
   }
   section.team .card img.card-img-top {
-    height: 300px;
-  }
-  section.team .card .card-footer i.fa-brands {
-    font-size: 2rem;
-    padding: 10px;
+    height: 400px;
   }
 }
 @media screen and (min-width: 992px) {
