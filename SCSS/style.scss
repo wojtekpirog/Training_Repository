@@ -412,6 +412,83 @@ section.team {
   }
 }
 
+/* Sekcja "Osiągnięcia" */
+section.achievements {
+  .achievement-box {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 10px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+    i {
+      color: colors.$white;
+      font-size: 4rem;
+      text-shadow: 0 0 10px colors.$caption-shadow;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 2.4rem;
+      margin: 6px 0 10px;
+    }
+  }
+}
+
+/* Sekcja "Kontakt" */
+section.contact {
+  background: url("../assets/images/contact_section_background.jpg") bottom center / cover;
+  background-attachment: fixed;
+  z-index: 0;
+  color: colors.$white;
+
+  .underline {
+    border-color: colors.$white;
+  }
+
+  .contact-item {
+    margin: 10px 0;
+
+    &:first-child, .social-media {
+      margin-bottom: 16px;
+    }
+
+    .social-media {
+      i {
+        font-size: 2.5rem;
+        padding: 10px;
+        color: colors.$white;
+        transition: color .15s ease-in-out;
+        
+        &.fa-facebook-f:hover {
+          color: #3b5998;
+        }
+        &.fa-twitter:hover {
+          color: #1da1f2;
+        }
+        &.fa-linkedin:hover {
+          color: #3b5998;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    ul > li {
+      font-size: 1.6rem;
+      padding: 6px 0;
+    }
+  }
+
+  .hero-shadow {
+    z-index: -1;
+  }
+}
+
 @media screen and (min-width: 576px) {
   section.team {
     .card {
@@ -422,6 +499,12 @@ section.team {
         font-size: 2rem;
         padding: 16px;
       } 
+    }
+  }
+
+  section.contact {
+    .contact-item:first-of-type {
+      margin-bottom: 0;
     }
   }
 }
@@ -494,8 +577,10 @@ section.team {
       margin-bottom: 10px;
     }
   }
-}
 
-@media screen and (min-width: 1200px) {
-
+  section.contact {
+    .contact-item:nth-child(2) {
+      align-self: center;
+    }
+  }
 }

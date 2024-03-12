@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -342,6 +343,69 @@ section.team .hero-shadow {
   z-index: -1;
 }
 
+/* Sekcja "Osiągnięcia" */
+section.achievements .achievement-box {
+  display: flex;
+  flex-direction: column;
+  margin: 16px 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+section.achievements .achievement-box i {
+  color: #fff;
+  font-size: 4rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+section.achievements .achievement-box span {
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin: 6px 0 10px;
+}
+
+/* Sekcja "Kontakt" */
+section.contact {
+  background: url("../assets/images/contact_section_background.jpg") bottom center/cover;
+  background-attachment: fixed;
+  z-index: 0;
+  color: #fff;
+}
+section.contact .underline {
+  border-color: #fff;
+}
+section.contact .contact-item {
+  margin: 10px 0;
+}
+section.contact .contact-item:first-child, section.contact .contact-item .social-media {
+  margin-bottom: 16px;
+}
+section.contact .contact-item .social-media i {
+  font-size: 2.5rem;
+  padding: 10px;
+  color: #fff;
+  transition: color 0.15s ease-in-out;
+}
+section.contact .contact-item .social-media i.fa-facebook-f:hover {
+  color: #3b5998;
+}
+section.contact .contact-item .social-media i.fa-twitter:hover {
+  color: #1da1f2;
+}
+section.contact .contact-item .social-media i.fa-linkedin:hover {
+  color: #3b5998;
+}
+section.contact .contact-item h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+section.contact .contact-item ul > li {
+  font-size: 1.6rem;
+  padding: 6px 0;
+}
+section.contact .hero-shadow {
+  z-index: -1;
+}
+
 @media screen and (min-width: 576px) {
   section.team .card .card-body {
     height: 100px;
@@ -349,6 +413,9 @@ section.team .hero-shadow {
   section.team .card .card-footer i.fa-brands {
     font-size: 2rem;
     padding: 16px;
+  }
+  section.contact .contact-item:first-of-type {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
@@ -400,5 +467,8 @@ section.team .hero-shadow {
   }
   section.portfolio-info .card {
     margin-bottom: 10px;
+  }
+  section.contact .contact-item:nth-child(2) {
+    align-self: center;
   }
 }/*# sourceMappingURL=style.css.map */
