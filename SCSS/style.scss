@@ -489,6 +489,16 @@ section.contact {
   }
 }
 
+/* Footer */
+footer {
+  font-size: 1.4rem;
+  font-weight: 600;
+
+  span {
+    color: colors.$primary-color;
+  }
+}
+
 @media screen and (min-width: 576px) {
   section.team {
     .card {

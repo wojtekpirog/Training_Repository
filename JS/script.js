@@ -2,7 +2,6 @@ const navbar = document.querySelector(".navbar");
 const allNavbarItems = document.querySelectorAll(".nav-link");
 const navbarList = document.querySelector(".navbar-collapse");
 const navbarCollapse = document.querySelector(".navbar-collapse");
-console.log(navbarCollapse);
 
 const handleScroll = () => {
   window.addEventListener("scroll", () => {
