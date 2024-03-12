@@ -1,31 +1,38 @@
-const navbar = document.querySelector(".navbar");
-const allNavbarItems = document.querySelectorAll(".nav-link");
-const navbarList = document.querySelector(".navbar-collapse");
-const navbarCollapse = document.querySelector(".navbar-collapse");
+let navbar;
+let allNavbarItems;
+let navbarCollapse;
 
-const handleScroll = () => {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 240) {
-      navbar.classList.add("shadow-bg");
-    } else {
-      navbar.classList.remove("shadow-bg");
-    }    
+const main = () => {
+  prepareDOMElements();
+  addEventListeners();
+}
+
+const prepareDOMElements = () => {
+  navbar = document.querySelector(".navbar");
+  allNavbarItems = document.querySelectorAll(".nav-link");
+  navbarCollapse = document.querySelector(".navbar-collapse");
+}
+
+const addEventListeners = () => {
+  window.addEventListener("scroll", handleScroll);
+  document.body.addEventListener("click", handleNavbarCollapse);
+
+  allNavbarItems.forEach(navbarItem => {
+    navbarItem.addEventListener("click", () => {
+      navbarCollapse.classList.remove("show");
+    });
   });
 }
 
-allNavbarItems.forEach(navbarItem => {
-  navbarItem.addEventListener("click", () => {
-    navbarList.classList.remove("show");
-  });
-});
+const handleScroll = () => {
+  window.scrollY >= 240 ? navbar.classList.add("shadow-bg") : navbar.classList.remove("shadow-bg");
+}
 
-document.body.addEventListener("click", (event) => {
-  if (!navbarCollapse.contains(event.target)) {
+const handleNavbarCollapse = e => {
+  if (!navbarCollapse.contains(e.target)) {
     const isNavbarExpanded = navbarCollapse.classList.contains("show");
-    if (isNavbarExpanded) {
-      navbarCollapse.classList.remove("show");
-    }
+    isNavbarExpanded && navbarCollapse.classList.remove("show");
   }
-});
+}
 
-document.addEventListener("DOMContentLoaded", handleScroll);
+document.addEventListener("DOMContentLoaded", main);
