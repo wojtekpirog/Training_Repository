@@ -1,4 +1,6 @@
 @use './colors.scss' as colors;
+@use './animations';
+
 *,
 *::before,
 *::after {
@@ -16,6 +18,8 @@
 body {
   font-family: 'Raleway', sans-serif;
   background-color: colors.$bgColor;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .hero-photo {
@@ -261,7 +265,14 @@ section.portfolio {
   }
 
   .carousel-item {
-    height: 600px;
+    height: 800px;
+    position: relative;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      bottom: 0;
+    }
   }
 
   .carousel-caption {

@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/7aa1ebf341.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <title>ProGamers</title>
 </head>
-<body>
-  <header>
-    <!-- Navbar -->
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <header>  <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top py-3">
       <div class="container">
         <!-- Navbar brand -->
@@ -48,7 +48,7 @@
             <!-- Navbar item -->
             <!-- Navbar item -->
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#portfolio-info">Portfolio</a>
             </li>
             <!-- Navbar item -->
             <!-- Navbar item -->
@@ -81,19 +81,21 @@
     <div id="home" class="hero hero-photo">
       <!-- Text inside hero -->
       <div class="hero-text text-center p-3">
-        <h1>Witajcie w Pro<span>Gamers</span></h1>
-        <p>W miejscu, gdzie gry tworzymy z pasją</p>
-        <a href="#aboutus" class="btn btn-lg btn-outline-light text-uppercase fw-semibold border-3 px-4 py-3 mt-4">
-          <i class="fa-solid fa-arrow-down pe-3"></i>
-          Poznaj nas
-          <i class="fa-solid fa-arrow-down ps-3"></i>
-        </a>
+        <h1 data-aos="fade-down">Witajcie w Pro<span>Gamers</span></h1>
+        <p data-aos="fade-down" data-aos-delay="300">W miejscu, gdzie gry tworzymy z pasją</p>
+        <div data-aos="fade-down" data-aos-delay="500">
+          <a href="#aboutus" class="btn btn-lg btn-outline-light text-uppercase fw-semibold border-3 px-4 py-3 mt-4">
+            <i class="fa-solid fa-arrow-down pe-3"></i>
+            Poznaj nas
+            <i class="fa-solid fa-arrow-down ps-3"></i>
+          </a>
+        </div>
       </div>
       <div class="hero-shadow"></div>
       <!-- Text inside hero -->
       <!-- Arrow down -->
       <a href="#aboutus">
-        <i class="fa-solid fa-chevron-down"></i>        
+        <i class="fa-solid fa-chevron-down bounce-top"></i>        
       </a>
       <!-- Arrow down -->
     </div>
@@ -111,7 +113,7 @@
         <!-- Section content -->
         <div class="row text-center">
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-right" data-aos-delay="300">
             <div class="card">
               <div>
                 <i class="fa-solid fa-mobile-screen"></i>
@@ -122,7 +124,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-down">
             <div class="card">
               <div>
                 <i class="fa-solid fa-desktop"></i>   
@@ -133,7 +135,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-left" data-aos-delay="300">
             <div class="card">
               <div>
                 <i class="fa-solid fa-file-code"></i>
@@ -144,7 +146,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-right" data-aos-delay="300">
             <div class="card">
               <div>
                 <i class="fa-solid fa-paw"></i>
@@ -155,7 +157,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-up">
             <div class="card">
               <div>
                 <i class="fa-solid fa-hamburger"></i>
@@ -166,7 +168,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-4" data-aos="fade-left" data-aos-delay="300">
             <div class="card">
               <div>
                 <i class="fa-solid fa-champagne-glasses"></i>
@@ -192,34 +194,34 @@
         <div class="row">
           <!-- Card -->
           <div class="col-lg-4">
-            <div class="card">
-              <p class="card-title">PC</p>
-              <div>
+            <div class="card" data-aos="zoom-in">
+              <p class="card-title" data-aos="fade-down">PC</p>
+              <div data-aos="fade-down" data-aos-delay="300">
                 <i class="fa-brands fa-steam"></i>
               </div>
-              <p class="card-text">Graj ze znajomymi na swoim blaszaku!</p>
+              <p class="card-text" data-aos="fade-down" data-aos-delay="500">Graj ze znajomymi na swoim blaszaku!</p>
             </div>
           </div>
           <!-- Card -->
           <!-- Card -->
           <div class="col-lg-4">
-            <div class="card">
-              <p class="card-title">PlayStation</p>
-              <div>
+            <div class="card" data-aos="zoom-in">
+              <p class="card-title" data-aos="fade-down">PlayStation</p>
+              <div data-aos="fade-down" data-aos-delay="300">
                 <i class="fa-brands fa-playstation"></i>
               </div>
-              <p class="card-text">Gry świetnie prezentują się na konsoli od Sony!</p>                
+              <p class="card-text" data-aos="fade-down" data-aos-delay="500">Gry świetnie prezentują się na konsoli od Sony!</p>                
             </div>
           </div>
           <!-- Card -->
           <!-- Card -->
           <div class="col-lg-4">
-            <div class="card">
-              <p class="card-title">Xbox</p>
-              <div>
+            <div class="card" data-aos="zoom-in" data-aos-duration="600">
+              <p class="card-title" data-aos="fade-down">Xbox</p>
+              <div data-aos="fade-down" data-aos-delay="300">
                 <i class="fa-brands fa-xbox"></i>
               </div>
-              <p class="card-text">Fani Xboxa spędzą z nami mnóstwo godzin!</p>
+              <p class="card-text" data-aos="fade-down" data-aos-delay="500">Fani Xboxa spędzą z nami mnóstwo godzin!</p>
             </div>
           </div>
           <!-- Card -->
@@ -248,7 +250,7 @@
           <div class="carousel-inner">
             <!-- carousel item -->
             <div class="carousel-item active">
-              <img src="./assets/images/mercedes-benz-amg-gt-mq.jpg" class="d-block w-100" alt="Okładka gry Racing GT">
+              <img src="./assets/images/mercedes-benz-amg-gt-mq.jpg" class="d-block w-100 h-100" alt="Okładka gry Racing GT">
               <div class="carousel-caption">
                 <h5>Racing GT</h5>
                 <p class="pb-4">Some representative placeholder content for the first slide.</p>
@@ -285,7 +287,7 @@
         <!-- Card group -->
         <div class="card-group d-lg-none">
           <!-- Card -->
-          <div class="card border border-2 rounded-4 me-2">
+          <div class="card border border-2 rounded-4 me-sm-2">
             <img src="./assets/images/mercedes-benz-amg-gt-mq.jpg" alt="Okładka gry Racing GT">
             <div class="card-body">
               <h5 class="card-title">Racing GT</h5>
@@ -294,7 +296,7 @@
           </div>
           <!-- Card -->
           <!-- Card -->
-          <div class="card border border-2 rounded-4 ms-2">
+          <div class="card border border-2 rounded-4 ms-sm-2">
             <img src="./assets/images/gaming-tv-mq.jpg" alt="Okładka gry Pro-X Football">
             <div class="card-body">
               <h5 class="card-title">Racing GT</h5>
@@ -569,7 +571,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6 text-center">
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="100">
               <i class="fa-solid fa-thumbs-up"></i>
               <span>100%</span>
               zadowolonych klientów              
@@ -578,7 +580,7 @@
           <!-- Achievement -->
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="200">
               <i class="fa-solid fa-trophy"></i>
               <span>37</span>
               zdobytych nagród              
@@ -587,7 +589,7 @@
           <!-- Achievement -->
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="300">
               <i class="fa-solid fa-user-group"></i>
               <span>143</span>
               pracowników              
@@ -596,7 +598,7 @@
           <!-- Achievement -->
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="300">
               <i class="fa-regular fa-building"></i>
               <span>7</span>
               nowoczesnych biur              
@@ -605,7 +607,7 @@
           <!-- Achievement -->
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="200">
               <i class="fa-solid fa-dice"></i>
               <span>58</span>
               stworzonych gier              
@@ -614,7 +616,7 @@
           <!-- Achievement -->
           <!-- Achievement -->
           <div class="col">
-            <div class="achievement-box">
+            <div class="achievement-box" data-aos="zoom-in" data-aos-delay="100">
               <i class="fa-solid fa-share-nodes"></i>
               <span>80.000</span>
               fanów w social media              
@@ -692,6 +694,8 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="./JS/slick.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./JS/aos.js"></script>
   <script src="./JS/script.js"></script>
 </body>
 </htmls
